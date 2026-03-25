@@ -69,6 +69,7 @@ for word in palabras_mezcladas:
 
 	else:
 		print(f"¡Perdiste! La palabra era: {word}")
-		score = 0
-
+		
+if score < 0:
+	score = 0
 print (f"Tu puntaje final es: {score} ")
