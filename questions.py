@@ -23,6 +23,9 @@ score = 0
 
 
 for word in palabras_mezcladas:
+	print("-" * 20)
+	print(f"NUeva ronda - Categoria: {seleccion}")
+	print("-" * 20)
 	attempts = 6
 	guessed = [] 
 	while attempts > 0:
