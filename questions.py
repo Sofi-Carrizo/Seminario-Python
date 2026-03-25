@@ -1,7 +1,7 @@
 import random
 categorias ={
 	"Lenguajes" : ["python"],
-	"Estructuras" : ["lista ", "cadena", "bucle"],
+	"Estructuras" : ["lista", "cadena", "bucle"],
 	"Conceptos" : ["programa", "variable", "funcion", "entero"]
 }
 
@@ -19,12 +19,12 @@ while seleccion not in categorias:
 lista_de_palabras = categorias[seleccion]
 palabras_mezcladas = random.sample(lista_de_palabras, k =len(lista_de_palabras))
 
-guessed = []
+score = 0
 
 
 for word in palabras_mezcladas:
 	attempts = 6
-	score = 0
+	guessed = [] 
 	while attempts > 0:
 		# Mostrar progreso: letras adivinadas y guiones para las que faltan
 		progress = ""
