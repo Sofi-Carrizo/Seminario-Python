@@ -1,22 +1,26 @@
 import random
-words = [
-    "python",
-    "programa",
-    "variable",
-    "funcion",
-    "bucle",
-    "cadena",
-    "entero",
-    "lista",
-]
+categorias ={
+	"Lenguajes" : ["python"],
+	"Estructuras" : ["lista ", "cadena", "bucle"],
+	"Conceptos" : ["programa", "variable", "funcion", "entero"]
+}
 
+print("¡Bienvenido al Ahorcado!")
+print("Categorias disponible: ")
+for nombre in categorias.keys():
+	print(f"-{nombre}")
+
+seleccion = ""
+while seleccion not in categorias:
+	seleccion = input("Elegi una categoria: ").capitalize() # No dara error si se usa minuscula en vez de mayuscula o viceversa
+	if seleccion not in categorias:
+		print("Esa categoria no existe. Intenta de nuevo.")
+
+words = categorias[seleccion]
 word = random.choice(words)
 guessed = []
 attempts = 6
 score = 0
-
-print("¡Bienvenido al Ahorcado!")
-print()
 
 while attempts > 0:
 	# Mostrar progreso: letras adivinadas y guiones para las que faltan
